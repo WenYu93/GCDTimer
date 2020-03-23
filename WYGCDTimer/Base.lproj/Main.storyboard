@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0S-kL-5zI">
+                                <rect key="frame" x="79.5" y="89" width="255" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9oD-OX-aj5"/>
+                                    <constraint firstAttribute="width" constant="255" id="yRa-ff-EPM"/>
+                                </constraints>
+                                <state key="normal" title="开始">
+                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eNP-bO-WnI"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tPf-6X-RSh">
+                                <rect key="frame" x="62" y="142" width="290" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="Wy0-dR-mxV"/>
+                                    <constraint firstAttribute="height" constant="10" id="rXe-DR-iHx"/>
+                                </constraints>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tPf-6X-RSh" firstAttribute="top" secondItem="H0S-kL-5zI" secondAttribute="bottom" constant="23" id="PaR-xG-YKB"/>
+                            <constraint firstItem="H0S-kL-5zI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jxa-H5-LZN"/>
+                            <constraint firstItem="H0S-kL-5zI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="lJY-rm-4Lo"/>
+                            <constraint firstItem="tPf-6X-RSh" firstAttribute="centerX" secondItem="H0S-kL-5zI" secondAttribute="centerX" id="wcv-f7-hHe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="progressView" destination="tPf-6X-RSh" id="Txc-9f-07J"/>
+                        <outlet property="startButton" destination="H0S-kL-5zI" id="jTH-uo-NuA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="72.991071428571431"/>
+        </scene>
+    </scenes>
+</document>
